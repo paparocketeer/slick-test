@@ -1,0 +1,166 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import 'base.scss';
+
+.container{
+    width: 1152px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 10;
+    margin-top: 72px;
+}
+
+h1{
+    font-size: 32px;
+    margin: 0;
+}
+.slick-slide {outline: none;}
+
+
+.slider{
+    margin: 0 -20px;
+    margin-top: 12px;    
+    .item{
+        margin: 20px;
+	    box-sizing: border-box;
+        position: relative;
+        filter: drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.4));
+        img{
+            border-radius: 8px;
+        }
+        span{
+            font-size: 24px;
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+        }
+    }
+}
+.navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .slick-prev {
+        left: -20px;
+        order: 1;
+        &:before{
+            content: url('data:image/svg+xml;utf8,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 6L7 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
+        &:hover:before{
+            content: url('data:image/svg+xml;utf8,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 6L7 11" stroke="%23f48e06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
+    }
+    .slick-next {
+        right: -20px;
+        order: 3;
+        &:before{
+            content: url('data:image/svg+xml;utf8,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 6L1 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
+        &:hover:before{
+            content: url('data:image/svg+xml;utf8,<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 6L1 11" stroke="%23f48e06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
+    }
+    .slick-prev, .slick-next {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        display: block;
+        border: 2px solid rgba(255, 255, 255, .3);
+        border-radius: 50%;
+        &:before{
+            font-size: unset;
+            top: calc(50% - 6px);
+            left: calc(50% - 4px);
+            position: absolute;
+            opacity: 1;
+        }
+    }
+    .slick-dots {
+        width: auto;
+        position: relative;
+        bottom: 0;
+        order: 2;
+        margin-top: -3px;
+        li {
+            position: relative;
+            display: inline-block;
+            margin: 0px 5px;
+            width: 6px;
+            height: 6px;
+            padding: 0px;
+            cursor: pointer;
+            button{
+                font-size: unset;
+                line-height: unset;
+                width: unset;
+                height: unset;
+                padding: 0;
+                &:before{
+                    line-height: unset;
+                    width: 6px;
+                    height: 6px;
+                    font-size: 6px;
+                    content: '•';
+                    opacity: .3;
+                    color: #fff;
+                }
+            }
+            &.slick-active{
+                margin: 0px 7px;
+                button{
+                    &:before{
+                        font-size: 10px;
+                        margin-left: -2px;
+                        margin-top: -1px;
+                        content: '•';
+                        opacity: 1;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1279.9px) {
+    .container {
+        max-width: 640px;
+    }    
+    .slider{   
+        .item{
+            img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.9px) {
+    .container{
+        width: 100%;
+    }   
+    h1{
+        margin-left: 16px;
+    }
+    .slider{   
+        margin: 0px;
+        margin-top: 32px;
+        .item{
+            margin: 0 8px;
+            img{
+                width: 327px;
+            }
+        }
+    }  
+    .navigation{
+        margin-top: 52px;
+    }
+}

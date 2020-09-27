@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/GothamPro.woff2') format('woff2'),
+      url('../fonts/GothamPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a, a:hover, a:focus, a:active{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+html, body {
+  box-sizing: border-box;
+  background: #0A0B0D;
+  font-family: Gotham Pro;
+  color: #fff;
+  line-height: 1;
+}
