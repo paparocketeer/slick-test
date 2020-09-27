@@ -28,9 +28,24 @@ h1{
         margin: 20px;
 	    box-sizing: border-box;
         position: relative;
+        border-radius: 8px;
         filter: drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.4));
+        &:before{
+            content: '';
+            border-radius: 8px;
+            display: block;
+            width: calc(100% - 40px);
+            background-color: red;
+            height: 140px;
+            bottom: -1px;
+            position: absolute;
+            right: 40px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
         img{
             border-radius: 8px;
+            
         }
         span{
             font-size: 24px;
@@ -154,6 +169,11 @@ h1{
         margin: 0px;
         margin-top: 32px;
         .item{
+            &:before{
+                content: '';
+                width: calc(100% - 16px);
+                right: 16px;
+            }
             margin: 0 8px;
             img{
                 width: 327px;
